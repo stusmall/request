@@ -1,5 +1,5 @@
 name: Check with yarn
-on: [push, pull_request ]
+on: [push, pull_request]
 jobs:
   build:
     name: Install and test with yarn
@@ -7,5 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+        with:
+          node-version: "18.16"
       - run: yarn install
       - run: yarn test
