@@ -240,10 +240,10 @@ tape('catch invalid characters error - GET', function (t) {
   }, function (err, res, body) {
     t.true(isExpectedHeaderCharacterError('test', err))
   })
-  .on('error', function (err) {
-    t.true(isExpectedHeaderCharacterError('test', err))
-    t.end()
-  })
+    .on('error', function (err) {
+      t.true(isExpectedHeaderCharacterError('test', err))
+      t.end()
+    })
 })
 
 tape('catch invalid characters error - POST', function (t) {
@@ -257,10 +257,10 @@ tape('catch invalid characters error - POST', function (t) {
   }, function (err, res, body) {
     t.true(isExpectedHeaderCharacterError('test', err))
   })
-  .on('error', function (err) {
-    t.true(isExpectedHeaderCharacterError('test', err))
-    t.end()
-  })
+    .on('error', function (err) {
+      t.true(isExpectedHeaderCharacterError('test', err))
+      t.end()
+    })
 })
 
 if (hasIPv6interface) {

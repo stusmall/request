@@ -478,9 +478,9 @@ tape('should have referer header by default when following redirect', function (
     t.equal(res.statusCode, 200)
     t.end()
   })
-  .on('redirect', function () {
-    t.equal(this.headers.referer, s.url + '/temp')
-  })
+    .on('redirect', function () {
+      t.equal(this.headers.referer, s.url + '/temp')
+    })
 })
 
 tape('should not have referer header when removeRefererHeader is true', function (t) {
@@ -495,9 +495,9 @@ tape('should not have referer header when removeRefererHeader is true', function
     t.equal(res.statusCode, 200)
     t.end()
   })
-  .on('redirect', function () {
-    t.equal(this.headers.referer, undefined)
-  })
+    .on('redirect', function () {
+      t.equal(this.headers.referer, undefined)
+    })
 })
 
 tape('should preserve referer header set in the initial request when removeRefererHeader is true', function (t) {
@@ -512,9 +512,9 @@ tape('should preserve referer header set in the initial request when removeRefer
     t.equal(res.statusCode, 200)
     t.end()
   })
-  .on('redirect', function () {
-    t.equal(this.headers.referer, 'http://awesome.com')
-  })
+    .on('redirect', function () {
+      t.equal(this.headers.referer, 'http://awesome.com')
+    })
 })
 
 tape('should use same agent class on redirect', function (t) {
