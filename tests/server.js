@@ -46,7 +46,7 @@ exports.createEchoServer = function () {
 
 exports.createSSLServer = function (opts) {
   var i
-  var options = { 'key': path.join(__dirname, 'ssl', 'test.key'), 'cert': path.join(__dirname, 'ssl', 'test.crt') }
+  var options = { 'key': path.join(__dirname, 'ssl', 'ca', 'server.key'), 'cert': path.join(__dirname, 'ssl', 'ca', 'server.crt') }
   if (opts) {
     for (i in opts) {
       options[i] = opts[i]
